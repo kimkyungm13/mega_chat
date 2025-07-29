@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <title>업계 최초 AI 시스템 - MEGA Chat AI</title>
+    <meta http-equiv="content-type" content="text/html; charset=euc-kr" />
+    <meta http-equiv="content-style-type" content="text/css" />
+    <meta http-equiv="content-script-type" content="text/javascript" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="http://www.megals.co.kr/favicon.ico" type="image/ico">
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/ui.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="lnb" id="lnb">
+            <div class="lnb-header">
+                <button class="close-lnb" id="closeLnb" data-role="menu-close" aria-label="메뉴닫기">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#222">
+                        <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" />
+                    </svg>
+                </button>
+                <div class="lnb-title">
+                    <span class="logo">
+                        <!--25.07.21--> <img src="http://img.megals.co.kr/mega_chat/logo.png" alt="메가로스쿨 AI 디케이">
+                    </span>
+                </div>
+                <button class="m-new-chat" data-role="new-chat" aria-label="새 질문하기">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#222">
+                        <path
+                            d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <button class="btn-chat new-chat-btn" onclick="location.href='ask.asp'">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="15px" fill="#222">
+                    <path
+                        d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z" />
+                </svg>
+                새 질문
+            </button>
+
+
+            <div class="chat active">
+                <button class="btn-chat">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15px" viewBox="0 -960 960 960" width="18px"
+                        fill="#222">
+                        <path
+                            d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 27-3 53t-10 51q-14-16-32.5-27T794-418q3-15 4.5-30.5T800-480q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93q51 0 97.5-15t85.5-42q12 17 29.5 30t37.5 20q-51 41-114.5 64T480-80Zm290-160q-21 0-35.5-14.5T720-290q0-21 14.5-35.5T770-340q21 0 35.5 14.5T820-290q0 21-14.5 35.5T770-240Zm-158-52L440-464v-216h80v184l148 148-56 56Z" />
+                    </svg>최근 질문
+                </button>
+
+                <div class="chat-history">
+                    <div class="chat-item active">
+                        <div class="chat-text">GPA 90점, 토익 800점이야. 경북대학교에 합격할 수 있을까? 합격할 수 있을까?</div>
+                        <button class="btn-more" aria-label="더보기"></button>
+                    </div>
+                    <div class="chat-item">
+                        <div class="chat-text">연세대 1단계 영어점수는 몇점인지 알수 있을까?</div>
+                        <button class="btn-more" aria-label="더보기"></button>
+                    </div>
+                    <div class="chat-item">
+                        <div class="chat-text">여기서 가장 많이 한 질문을 두 줄로 보여줘서 말줄임 되게 처리하는 작업을 했어</div>
+                        <button class="btn-more" aria-label="더보기"></button>
+                    </div>
+                    <div class="chat-item">
+                        <div class="chat-text">LEET 157점 지망 대학 추천</div>
+                        <button class="btn-more" aria-label="더보기"></button>
+                    </div>
+                    <div class="chat-item">
+                        <div class="chat-text">연세대 1단계 영어점수는?</div>
+                        <button class="btn-more" aria-label="더보기"></button>
+                    </div>
+                    <div class="chat-item fixed" aria-label="더보기">
+                        <div class="chat-text">2025학년도 경북대학교 로스쿨</div>
+                        <button class="btn-more" aria-label="더보기"></button>
+                    </div>
+                    <div class="chat-item">
+                        <div class="chat-text">연세대 1단계 영어점수는?</div>
+                        <button class="btn-more" aria-label="더보기"></button>
+                    </div>
+                    <div class="chat-item">
+                        <div class="chat-text">여기서 가장 많이 한 질문</div>
+                        <button class="btn-more" aria-label="더보기"></button>
+                    </div>
+                    <div class="chat-item">
+                        <div class="chat-text">LEET 157점 지망 대학 추천</div>
+                        <button class="btn-more" aria-label="더보기"></button>
+                    </div>
+                    <div class="chat-item">
+                        <div class="chat-text">연세대 1단계 영어점수는?</div>
+                        <button class="btn-more" aria-label="더보기"></button>
+                    </div>
+                    <div class="chat-item">
+                        <div class="chat-text">2025학년도 경북대학교 로스쿨</div>
+                        <button class="btn-more" aria-label="더보기"></button>
+                    </div>
+                    <div class="chat-item">
+                        <div class="chat-text">2025학년도 경북대학교 로스쿨</div>
+                        <button class="btn-more" aria-label="더보기"></button>
+                    </div>
+                    <div class="chat-item">
+                        <div class="chat-text">연세대 1단계 영어점수는?</div>
+                        <button class="btn-more" aria-label="더보기"></button>
+                    </div>
+                    <div class="chat-item">
+                        <div class="chat-text">2025학년도 경북대학교 로스쿨</div>
+                        <button class="btn-more" aria-label="더보기"></button>
+                    </div>
+                    <div class="chat-item">
+                        <div class="chat-text">2025학년도 경북대학교 로스쿨</div>
+                        <button class="btn-more" aria-label="더보기"></button>
+                    </div>
+                    <div class="chat-item">
+                        <div class="chat-text">연세대 1단계 영어점수는?</div>
+                        <button class="btn-more" aria-label="더보기"></button>
+                    </div>
+                    <div class="chat-item">
+                        <div class="chat-text">2025학년도 경북대학교 로스쿨</div>
+                        <button class="btn-more" aria-label="더보기"></button>
+                    </div>
+                    <div class="chat-item">
+                        <div class="chat-text">2025학년도 경북대학교 로스쿨</div>
+                        <button class="btn-more" aria-label="더보기"></button>
+                    </div>
+                    <ul class="options">
+                        <li class="fix-list"><a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#222">
+                                    <path
+                                        d="m640-480 80 80v80H520v240l-40 40-40-40v-240H240v-80l80-80v-280h-40v-80h400v80h-40v280Zm-286 80h252l-46-46v-314H400v314l-46 46Zm126 0Z" />
+                                </svg>
+                                고정</a></li>
+                        <li class="f_clear"><a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#222">
+                                    <path
+                                        d="M680-840v80h-40v327l-80-80v-247H400v87l-87-87-33-33v-47h400ZM480-40l-40-40v-240H240v-80l80-80v-46L56-792l56-56 736 736-58 56-264-264h-6v240l-40 40ZM354-400h92l-44-44-2-2-46 46Zm126-193Zm-78 149Z" />
+                                </svg>
+                                고정해제</a></li>
+                        <li class="hide-list"> <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#222">
+                                    <path
+                                        d="m644-428-58-58q9-47-27-88t-93-32l-58-58q17-8 34.5-12t37.5-4q75 0 127.5 52.5T660-500q0 20-4 37.5T644-428Zm128 126-58-56q38-29 67.5-63.5T832-500q-50-101-143.5-160.5T480-720q-29 0-57 4t-55 12l-62-62q41-17 84-25.5t90-8.5q151 0 269 83.5T920-500q-23 59-60.5 109.5T772-302Zm20 246L624-222q-35 11-70.5 16.5T480-200q-151 0-269-83.5T40-500q21-53 53-98.5t73-81.5L56-792l56-56 736 736-56 56ZM222-624q-29 26-53 57t-41 67q50 101 143.5 160.5T480-280q20 0 39-2.5t39-5.5l-36-38q-11 3-21 4.5t-21 1.5q-75 0-127.5-52.5T300-500q0-11 1.5-21t4.5-21l-84-82Zm319 93Zm-151 75Z" />
+                                </svg>
+                                숨김</a></li>
+                        <li class="h_clear"> <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#222">
+                                    <path
+                                        d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm0-72q-45 0-76.5-31.5T372-500q0-45 31.5-76.5T480-608q45 0 76.5 31.5T588-500q0 45-31.5 76.5T480-392Zm0 192q-146 0-266-81.5T40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200Zm0-300Zm0 220q113 0 207.5-59.5T832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280Z" />
+                                </svg>
+                                숨김해제</a></li>
+                        <li class="link-item"><a href="" class="m-btn-close">닫기</a></li>
+                    </ul>
+                    <div class="dimmed"></div>
+                </div>
+            </div>
+            <div class="chat">
+                <button class="btn-chat">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#222">
+                        <path
+                            d="m644-428-58-58q9-47-27-88t-93-32l-58-58q17-8 34.5-12t37.5-4q75 0 127.5 52.5T660-500q0 20-4 37.5T644-428Zm128 126-58-56q38-29 67.5-63.5T832-500q-50-101-143.5-160.5T480-720q-29 0-57 4t-55 12l-62-62q41-17 84-25.5t90-8.5q151 0 269 83.5T920-500q-23 59-60.5 109.5T772-302Zm20 246L624-222q-35 11-70.5 16.5T480-200q-151 0-269-83.5T40-500q21-53 53-98.5t73-81.5L56-792l56-56 736 736-56 56ZM222-624q-29 26-53 57t-41 67q50 101 143.5 160.5T480-280q20 0 39-2.5t39-5.5l-36-38q-11 3-21 4.5t-21 1.5q-75 0-127.5-52.5T300-500q0-11 1.5-21t4.5-21l-84-82Zm319 93Zm-151 75Z">
+                        </path>
+                    </svg>숨김 질문
+                </button>
+                <p class="chat-list">숨김 처리한 질문 내역이 <br>
+                    여기에 표시됩니다
+                </p>
+
+            </div>
+            <button class="btn-chat hide-chat-btn" type="button" onclick="location.href=''">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" viewBox="0 0 18 21" fill="none">
+                    <path
+                        d="M8.9 15C9.25 15 9.54583 14.8792 9.7875 14.6375C10.0292 14.3958 10.15 14.1 10.15 13.75C10.15 13.4 10.0292 13.1042 9.7875 12.8625C9.54583 12.6208 9.25 12.5 8.9 12.5C8.55 12.5 8.25417 12.6208 8.0125 12.8625C7.77083 13.1042 7.65 13.4 7.65 13.75C7.65 14.1 7.77083 14.3958 8.0125 14.6375C8.25417 14.8792 8.55 15 8.9 15ZM8 11.15H9.85C9.85 10.8667 9.8625 10.625 9.8875 10.425C9.9125 10.225 9.96667 10.0333 10.05 9.85C10.1333 9.66667 10.2375 9.49583 10.3625 9.3375C10.4875 9.17917 10.6667 8.98333 10.9 8.75C11.4833 8.16667 11.8958 7.67917 12.1375 7.2875C12.3792 6.89583 12.5 6.45 12.5 5.95C12.5 5.06667 12.2 4.35417 11.6 3.8125C11 3.27083 10.1917 3 9.175 3C8.25833 3 7.47917 3.225 6.8375 3.675C6.19583 4.125 5.75 4.75 5.5 5.55L7.15 6.2C7.26667 5.75 7.5 5.3875 7.85 5.1125C8.2 4.8375 8.60833 4.7 9.075 4.7C9.525 4.7 9.9 4.82083 10.2 5.0625C10.5 5.30417 10.65 5.625 10.65 6.025C10.65 6.30833 10.5583 6.60833 10.375 6.925C10.1917 7.24167 9.88333 7.59167 9.45 7.975C9.16667 8.20833 8.9375 8.4375 8.7625 8.6625C8.5875 8.8875 8.44167 9.125 8.325 9.375C8.20833 9.625 8.125 9.8875 8.075 10.1625C8.025 10.4375 8 10.7667 8 11.15ZM9 21L6 18H2C1.45 18 0.979167 17.8042 0.5875 17.4125C0.195833 17.0208 0 16.55 0 16V2C0 1.45 0.195833 0.979167 0.5875 0.5875C0.979167 0.195833 1.45 0 2 0H16C16.55 0 17.0208 0.195833 17.4125 0.5875C17.8042 0.979167 18 1.45 18 2V16C18 16.55 17.8042 17.0208 17.4125 17.4125C17.0208 17.8042 16.55 18 16 18H12L9 21ZM2 16H6.8L9 18.2L11.2 16H16V2H2V16Z" />
+                </svg>AI 문의
+            </button>
+
+            <aside class="creadit-wrap">
+                <div class="credit-status">
+                    <div class="status-wrap">
+                        <div class="status">
+                            <span class="status-icon">
+                                <img src="http://img.megals.co.kr/mega_chat/ico_credit.png" alt="">
+                            </span>
+                            <span class="status-label">이용권</span>
+                            <span class="status-count">10</span>
+                        </div>
+                        <span class="status-detail">( 일반 0 | 서비스권 0 ) </span>
+                    </div>
+                    <a href="#" class="btn-buy">구매하기</a>
+                    <a href="#" class="btn-logout"></a>
+                </div>
+                <a href="#" class="mo btn-text-logout">로그아웃</a>
+            </aside>
+
+        </div>
+        <main class="main">
+            <header class="main-header">
+                <button class="hamburger-menu" id="hamburgerMenu" aria-label="메뉴열기">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#222">
+                        <path d="M120-120v-80h720v80H120Zm0-320v-80h720v80H120Zm0-320v-80h720v80H120Z" />
+                    </svg>
+                </button>
+                <span class="logo">
+                    <!--25.07.21--> <img src="http://img.megals.co.kr/mega_chat/logo.png" alt="메가로스쿨 AI 디케이">
+                </span>
+                <button class="btn-chat" data-role="new-chat" aria-label="새 질문하기">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#222">
+                        <path
+                            d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z" />
+                    </svg>
+                </button>
+            </header>
+            <aside class="creadit-wrap">
+                <div class="credit-status">
+                    <div class="status-wrap">
+                        <div class="status">
+                            <span class="status-icon">
+                                <img src="http://img.megals.co.kr/mega_chat/ico_credit.png" alt="">
+                            </span>
+                            <span class="status-label">이용권</span>
+                            <span class="status-count">10</span>
+                        </div>
+                        <span class="status-detail">( 일반 0 | 서비스권 0 ) </span>
+                    </div>
+                    <a href="#" class="btn-buy">구매하기</a>
+                    <a href="#" class="btn-logout"></a>
+                </div>
+                <a href="#" class="mo btn-text-logout">로그아웃</a>
+            </aside>
+            <div class="chat-container">
+                <div class="contents chat-content">
+                    <div class="board-header">
+                        <h2 class="board-tit">AI 문의</h2>
+                        <div class="board-top">
+                            <ul>
+                                <li>※ 본인이 질문한 게시글만 노출됩니다.</li>
+                                <li>※ 답변에 대한 문의 시 답변 캡처 이미지를 첨부하시기 바랍니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="view">
+                        <div class="view-wrap question">
+                            <div class="view-header">
+                                <div class="icon ic-q"></div>
+                                <div class="tit-wrap">
+                                    <div class="title"><span class="type">[오류신고]</span> LEET 157점 지망 대학 추천 질문했는데 답변…이야.
+                                        경북대학교에 합격할 수 있을까?LEET 157점 지망 대학
+                                        추천
+                                        질문했는데 답변…이야. 경북대학교에 합격할 수 있을까?LEET 157점 지망 대학 추천
+                                        질문했는데 답변…이야. 경북대학교에 합격할 수 있을까?LEET 157점 지망 대학 추천 질문했는데 답변…이야. 경북대학교에 합격할 수 있을까?
+                                    </div>
+                                    <div class="date">2025-06-25</div>
+                                </div>
+                            </div>
+                            <div class="attachments">
+                                <p class="label">첨부파일</p>
+                                <ul class="file">
+                                    <li><a href="#">%파일명1%.jpg</a></li>
+                                    <li><a href="#">%파일명2%.jpg</a></li>
+                                </ul>
+                            </div>
+                            <div class="content">
+                                게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을 작성하면
+                                노출되는
+                                영역 입니다.게시글 내용을 작성하면 노출되는 영역
+                                입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을 작성하면 노출되는 영역 입니다.
+                            </div>
+                        </div>
+                        <div class="view-wrap answer">
+                            <div class="view-header">
+                                <div class="icon ic-a"></div>
+                                <div class="tit-wrap">
+                                    <div class="title">LEET 157점 지망 대학 추천 질문했는데 답변…이야. 경북대학교에 합격할 수 있을까?LEET 157점 지망 대학
+                                        추천
+                                        질문했는데 답변…이야. 경북대학교에 합격할 수 있을까?LEET 157점 지망 대학 추천
+                                        질문했는데 답변…이야. 경북대학교에 합격할 수 있을까?LEET 157점 지망 대학 추천 질문했는데 답변…이야. 경북대학교에 합격할 수 있을까?
+                                    </div>
+                                    <div class="date">2025-06-25</div>
+                                </div>
+                            </div>
+                            <div class="attachments">
+                                <p class="label">첨부파일</p>
+                                <ul class="file">
+                                    <li><a href="#">%파일명1%.jpg</a></li>
+                                </ul>
+                            </div>
+                            <div class="content">
+                                게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을 작성하면
+                                노출되는
+                                영역 입니다.게시글 내용을 작성하면 노출되는 영역
+                                입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을
+                                작성하면
+                                노출되는 영역 입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을 작성하면 노출되는
+                                영역 입니다.게시글 내용을 작성하면 노출되는 영역
+                                입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을
+                                작성하면
+                                노출되는 영역 입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을 작성하면 노출되는
+                                영역 입니다.게시글 내용을 작성하면 노출되는 영역
+                                입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을 작성하면 노출되는 영역 입니다.노출되는 영역 입니다.게시글 내용을 작성하면 노출되는 영역
+                                입니다.게시글 내용을 작성하면 노출되는
+                                영역 입니다.게시글 내용을 작성하면 노출되는 영역
+                                입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을 작성하면노출되는 영역 입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을
+                                작성하면 노출되는
+                                영역 입니다.게시글 내용을 작성하면 노출되는 영역
+                                입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을 작성하면노출되는 영역 입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을
+                                작성하면 노출되는
+                                영역 입니다.게시글 내용을 작성하면 노출되는 영역
+                                입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을 작성하면노출되는 영역 입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을
+                                작성하면 노출되는
+                                영역 입니다.게시글 내용을 작성하면 노출되는 영역
+                                입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을 작성하면노출되는 영역 입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을
+                                작성하면 노출되는
+                                영역 입니다.게시글 내용을 작성하면 노출되는 영역
+                                입니다.게시글 내용을 작성하면 노출되는 영역 입니다.게시글 내용을 작성하면
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-list">목록</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="dimmed"></div>
+    </div>
+</body>
+
+</html>

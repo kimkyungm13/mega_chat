@@ -1,0 +1,41 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+<head>
+    <title>업계 최초 AI 시스템 - MEGA Chat AI</title>
+    <meta http-equiv="content-type" content="text/html; charset=euc-kr" />
+    <meta http-equiv="content-style-type" content="text/css" />
+    <meta http-equiv="content-script-type" content="text/javascript" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="http://www.megals.co.kr/favicon.ico" type="image/ico">
+    <link type="text/css" rel="stylesheet" href="http://img.megals.co.kr/common/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="http://img.megamd.co.kr/css/publishing.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="http://www.megals.co.kr/common/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/ui.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--#include file="inc.lnb.asp"-->
+        <main class="wrapper__main">
+            <!--#include file="inc.utils.asp"-->
+            <section class="main__contents">
+                <p class="contents__title">
+                    업계 최초 <span class="primary b">AI</span> 시스템 <br>
+                <div class="main__title">
+                    <span class="exb">MEGA<span class="primary">chat</span>
+                    </span>을 만나보세요
+                </div>
+                </p>
+                <p class="contents__desc">데이터에서 합격전략을 완성하다</p>
+            </section>
+        </main>
+        <div class="dimmed"></div>
+    </div>
+</body>
+
+</html>

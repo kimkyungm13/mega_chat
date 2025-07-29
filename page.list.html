@@ -1,0 +1,156 @@
+<!-- TABLE ID 반드시 입력 : /폴더명 -->
+<style>
+    .new td {
+        background: rgb(255 247 0 / 41%) !important;
+    }
+</style>
+
+<table id="PC" class="catalog">
+    <col width="20%" />
+    <col />
+    <thead>
+        <tr>
+            <th scope="col">*</th>
+            <th scope="col">Page</th>
+            <th scope="col">url</th>
+            <th scope="col">url-html</th>
+        </tr>
+    </thead>
+    <tbody id="FrontList">
+        <!-- <tr class="depTitle"><td colspan="4"><p class="folder"></p></td></tr> -->
+        <!-- <tr>
+            <td>lnb</td>
+            <td></td>
+            <td>inc.lnb.asp</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>chat Textarea</td>
+            <td><a href="textarea.asp" target="_blank"></a></td>
+            <td>
+                <ul>
+                    <li>inc.chatbox.asp(Default)</li>
+                    <li>inc.chatbox-logout.asp</li>
+                    <li>inc.chatbox-loading.asp</li>
+                </ul>
+            </td>
+            <td>
+
+            </td>
+        </tr> -->
+
+        <tr>
+            <td>2차 디자인 작업(메인 텍스트, BI수정)</td>
+            <td>비로그인 상태 회원 최초 진입 시 </td>
+            <td><a href="guest.asp" target="_blank"></a></td>
+            <td><a href="guest.html" target="_blank"></a></td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td>로그인 회원 최초 진입 시(새 질문 링크)</td>
+            <td><a href="ask.asp" target="_blank"></a></td>
+            <td><a href="ask.html" target="_blank"></a></td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td>답변 준비중</td>
+            <td><a href="chat-loading.asp" target="_blank"></a></td>
+            <td><a href="chat-loading.html" target="_blank"></a></td>
+
+
+        </tr>
+        <tr>
+            <td></td>
+            <td>답변 완료 - 불가</td>
+            <td><a href="chat-error.asp" target="_blank"></a></td>
+            <td><a href="chat-error.html" target="_blank"></a></td>
+
+
+        </tr>
+
+        <!-- <tr>
+            <td></td>
+            <td>답변 완료 - 데이터노출</td>
+            <td><a href="chat.asp" target="_blank"></a></td>
+            <td><a href="chat.html" target="_blank"></a></td>
+        </tr> -->
+        <tr>
+            <td></td>
+            <td>답변 완료 - 데이터노출</td>
+            <td></td>
+            <td><a href="chat-ver2.html" target="_blank"></a></td>
+        </tr>
+        <tr>
+            <td>2차 디자인 작업</td>
+            <td>AI 문의 - no data</td>
+            <td><a href="board.asp" target="_blank"></a></td>
+            <td><a href="board.html" target="_blank"></a></td>
+        </tr>
+        <tr>
+            <td>2차 디자인 작업</td>
+            <td>AI 문의 - list</td>
+            <td><a href="board-list.asp" target="_blank"></a></td>
+            <td><a href="board-list.html" target="_blank"></a></td>
+        </tr>
+        <tr>
+            <td>2차 디자인 작업</td>
+            <td>AI 문의 - view 답변준비중</td>
+            <td><a href="board-view-incom.asp" target="_blank"></a></td>
+            <td><a href="board-view-incom.html" target="_blank"></a></td>
+        </tr>
+        <tr>
+            <td>2차 디자인 작업</td>
+            <td>AI 문의 - view 답변완료 </td>
+            <td><a href="board-view-com.asp" target="_blank"></a></td>
+            <td><a href="board-view-com.html" target="_blank"></a></td>
+        </tr>
+        <tr>
+            <td>2차 디자인 작업</td>
+            <td>AI 문의 - write</td>
+            <td><a href="board-write.asp" target="_blank"></a></td>
+            <td><a href="board-write.html" target="_blank"></a></td>
+        </tr>
+        <tr>
+            <td>2차 디자인 작업</td>
+            <td>이용안내 전문보기</td>
+            <td><a href="pop.html"
+                    onclick="window.open( this.href , '_blank' , ' width=750 , height=800, top=50 , left=50 , scrollbars=yes, toolbar=no, menubar=no, resizable=no, copyhistory=no' ); return false">
+                    이용안내 전문보기</a>
+            </td>
+            <td>
+                0725)텍스트수정 : 주석: 07.25
+            </td>
+        </tr>
+        <!--
+        <tr class="new">
+            <td>2차 디자인 작업</td>
+            <td>AI이용페이지 진입 경로</td>
+            <td><a href="http://design.megals.co.kr/Design/2025/0718_buyai/bnr.html" target="_blank"></a></td>
+            <td>buyai/common.css 첨부</td>
+        </tr>
+        <tr class="new">
+            <td>2차 디자인 작업</td>
+            <td>AI이용페이지 진입 경로-Mobile</td>
+            <td><a href="m_main.html" target="_blank"></a></td>
+            <td></td>
+        </tr>-->
+
+
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function () {
+        var $front = $("#FrontList"), front = $front.get(0);
+        front.a = $front.find("a");
+        front.a.html(function () { return this.href.substring(this.href.lastIndexOf("/") + 1); }).each(function () {
+            realurl = $(this).attr("href");
+            $(this).prop("href", folder + "/" + realurl);
+            if (!this.onclick) this.target = "_blank";
+        });
+    });
+    //]]>
+</script>

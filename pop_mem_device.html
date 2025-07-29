@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="//img.megals.co.kr/common/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="//img.megals.co.kr/common/css/common.css" />
+    <title>기기 등록 안내</title>
+    <style type="text/css">
+        html,
+        body {
+            overflow: hidden;
+        }
+
+        .f15 {
+            font-size: 15px;
+            color: #888;
+            !important;
+        }
+
+        .mark0 {
+            color: #bbb !important;
+            999
+        }
+
+        .mark2 {
+            color: #e12c22 !important;
+        }
+
+        .mark9 {
+            color: #333 !important;
+        }
+
+        .f11h20 {}
+
+        .tleft {
+            text-align: left !important;
+        }
+
+        #wrap_pop1 {
+            position: relative;
+            height: auto;
+            min-height: 100%;
+            border: solid #48474d;
+            border-width: 0 1px;
+            background: url('//img.megals.co.kr/mypage/2017/0320_player/popup_bline2.png') left bottom repeat-x;
+        }
+
+        #wrap_pop1>h1 {
+            height: 48px;
+            margin: 0 -1px;
+            padding: 0 0 0 25px;
+            border-top: 3px solid #e12c22;
+            background: #48474d;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 45px;
+        }
+
+        #wrap_pop1 #main {
+            padding: 20px;
+        }
+
+        .box02 {
+            padding: 20px;
+            border: 1px solid #e2e2e2;
+            background: #f9f9f9;
+        }
+
+        ul.lstNemo>li,
+        dl.lstNemo>dt,
+        p.bltNemo,
+        div.bltNemo {
+            padding-left: 9px;
+            text-indent: -9px;
+        }
+
+        ul.lstNemo>li,
+        dl.lstNemo>dt,
+        p.bltNemo,
+        div.bltNemo {
+            padding-left: 9px;
+            text-indent: -9px;
+        }
+
+        ul.lstNemo>li,
+        dl.lstNemo>dt,
+        .bltNemo {
+            *zoom: expression(this.runtimeStyle['zoom']='1', this.innerHTML="<i class='ie7before'></i>" + this.innerHTML);
+        }
+
+        ul.lstNemo>li>i.ie7before,
+        .bltNemo>i.ie7before,
+        ul.lstNemo>li:before,
+        dl.lstNemo>dt:before,
+        .bltNemo:before {
+            content: ' ';
+            width: 3px;
+            height: 3px;
+            margin: 0 5px 2px 0;
+            background: #c7b9b0;
+            vertical-align: middle;
+            display: inline-block;
+            *margin-bottom: 0;
+        }
+
+
+        input {
+            margin: 0;
+            vertical-align: middle;
+        }
+
+        input[type='radio'],
+        input[type='checkbox'] {
+            margin: 0 2px;
+            *margin-right: 0;
+            vertical-align: -2px;
+        }
+
+        .IE8 input[type='radio'],
+        .IE9 input[type='radio'] {
+            vertical-align: -1px;
+        }
+
+        *+html input[type='checkbox'] {
+            vertical-align: -3px;
+        }
+
+        input[type='text'],
+        input[type='password'] {
+            height: 28px;
+            padding: 0 9px;
+            border: 1px solid #ccc;
+            color: #666;
+            line-height: 28px;
+        }
+
+        .IE9 input[type='text'],
+        .IE9 input[type='password'] {
+            /*line-height:21px;*/
+        }
+
+        table {
+            border: 0;
+            border-spacing: 0;
+            border-collapse: separate;
+            *border-collapse: collapse;
+        }
+
+        .tbl01 {
+            width: 100%;
+            border-top: 2px solid #e12c22;
+            border-bottom: 1px solid #777;
+            color: #333;
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        .tbl01 th {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        .tbl01 th,
+        .tbl01 td {
+            height: 22px;
+            padding: 10px 0;
+            border-right: 1px solid #ededed;
+            border-top: 1px solid #cfcfcf;
+            text-align: center;
+        }
+
+        .tbl01 th {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .tbl01 th:last-child,
+        .tbl01 td:last-child {
+            border-right-width: 0;
+        }
+
+        .tbl01 thead+tbody tr:first-child th,
+        .tbl01 thead+tbody tr:first-child td {
+            border-top: 0;
+        }
+
+        .tbl01 tbody.type1 {
+            background: #fff;
+        }
+
+        .tbl01 tbody.type1 tr+tr td.bt0 {
+            background: none;
+        }
+
+        .tbl01.type1 {
+            border-top: 1px solid #777;
+        }
+
+        .tbl01.type1 tr:first-child th,
+        .tbl01.type1 tr:first-child td {
+            border-top: 0;
+        }
+    </style>
+    <script type="text/javascript" src="//img.megals.co.kr/common/js/jquery-1.10.2.min.js"></script>
+    <script src="/common/js/slides.min.jquery.js"></script>
+    <script type="text/javascript" src="//img.megals.co.kr/common/js/rolling.js?ver=20250703"></script>
+    <script type="text/javascript" src="//img.megals.co.kr/common/js/inputPlaceholder.js"></script>
+    <script type="text/javascript" src="//img.megals.co.kr/common/js/common.js?ver=20250703"></script>
+    <script type="text/javascript" src="//img.megals.co.kr/common/js/gnb.js?ver=20250703"></script>
+    <script type="text/javascript" src="//img.megals.co.kr/common/js/jcarousellite_1.0.1.pack.js"></script>
+    <script type="text/javascript" src="/common/js/jquery.placeholder.js"></script>
+</head>
+
+<body>
+
+    <form method="post" name="frmDev" id="frmDev" action="Pop_mem_device_proc.asp" target="ExeFrm">
+        <input type="hidden" name="mode" id="mode" value="">
+        <input type="hidden" name="seq" id="seq" value="">
+        <input type="hidden" name="did" id="did" value="">
+        <input type="hidden" name="nic" id="nic" value="">
+        <input type="hidden" name="dkbn" id="dkbn" value="">
+
+        <div id="wrap_pop1" class="wrap" style="width: 860px;">
+            <h1>기기 등록 안내</h1>
+
+            <div id="main">
+                <div class="f15"><strong>수강을 위해 기기 등록을 해주시기 바랍니다.</strong></div>
+                <div class="mark9 f16 mt10">
+                    <strong><span style="color:#2a75ca;">()</span> 회원님의 플레이어 ID</strong>
+                </div>
+
+                <div>
+                    <table class="tbl01 type1 mt10">
+                        <caption></caption>
+                        <tbody>
+
+                            <tr>
+
+                                <th style="width:12%"><strong>Kollus Player(mobile)</strong></th>
+
+                                <td style="width:38%" class="tleft mark9"><strong
+                                        style="padding-left:5px;">e861b96654a04a9363fc254d7ea2907267c42520</strong></td>
+                                <td style="width:12%" class="mark8">2025-06-28</br>17:17:11</td>
+                                <td style="width:" class="tleft">
+                                    <span style="padding-left:10px;"><input type="text" id="nicknm" name="nicknm"
+                                            value="기기 이름 등록" placeholder="기기 이름 등록" style="width:10em"
+                                            class="mark0" /></span>
+                                    <span style="padding-left:10px;"><a
+                                            href="javascript:fnSetDevNickNm(0, 110460, 'e861b96654a04a9363fc254d7ea2907267c42520', 'S');"><img
+                                                src="//img.megals.co.kr/mypage/2017/0320_player/btn_01.jpg" /></a> <a
+                                            href="javascript:fnSetDevDel(110460, 'e861b96654a04a9363fc254d7ea2907267c42520', 'S');"><img
+                                                src="//img.megals.co.kr/mypage/2017/0320_player/btn_02.jpg" /></a>
+                                </td>
+                            </tr>
+
+                            <!--2025 ai-->
+                            <tr>
+
+                                <th style="width:12%"><strong>AI서비스(PC)</strong></th>
+
+                                <td style="width:38%" class="tleft mark9"><strong
+                                        style="padding-left:5px;">%기기정보%</strong></td>
+                                <td style="width:12%" class="mark8">2025-06-27</br>16:20:27</td>
+                                <td style="width:" class="tleft">
+                                    <span style="padding-left:10px;"><input type="text" id="nicknm" name="nicknm"
+                                            value="기기 이름 등록" placeholder="기기 이름 등록" style="width:10em"
+                                            class="mark0" /></span>
+                                    <span style="padding-left:10px;"><a
+                                            href="javascript:fnSetDevNickNm(2, 110430, '0B6CDE1B0ACEBD655949C6962B043DD2F1B079D6', 'S');"><img
+                                                src="//img.megals.co.kr/mypage/2017/0320_player/btn_01.jpg" /></a> <a
+                                            href="javascript:fnSetDevDel(110430, '0B6CDE1B0ACEBD655949C6962B043DD2F1B079D6', 'S');"><img
+                                                src="//img.megals.co.kr/mypage/2017/0320_player/btn_02.jpg" /></a>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <script type="text/javascript">
+                        // 입력칸 기본 텍스트
+                        $("[placeholder]").placeholder();
+                    </script>
+                </div>
+
+                <div class="f15 mt20" span style="text-align:center;">
+                    (등록기기 삭제 가능 횟수 : <strong class="mark2">4회</strong>)
+                </div>
+
+                <div class="box02 mt25"
+                    style="padding:15px 20px; font-size:11px !important; font-family:Dotum !important; line-height:20px !important; color:#888;">
+                    <ul class="lstNemo">
+                        <li>플레이어 ID는 동영상 플레이어 고유의 일련번호를 말합니다.</li>
+                        <li>동영상 강의에서는 불법적인 강의 공유 차단 및 원활한 서비스 제공을 위해 사용자의 플레이어 ID를 수집하고 있습니다.<br>
+                            플레이어 ID는 스트리밍 3개, 다운로드 1개까지 등록이 가능합니다.
+                        </li>
+                        <li>강좌를 구매하신 회원님께서 강의 동영상을 재생/다운로드 하시면 해당 플레이어의 ID가 메가로스쿨 서버에 자동으로 등록되며<br>
+                            등록된 ID를 통해서만 강의 동영상 시청 / 다운로드가 가능합니다.<br>
+                            (등록되지 않은 ID에서는 자동적으로 차단)</li>
+                        <!--2025 ai-->
+                        <li>AI서비스 이용 시, 해당 플레이어의 ID가 메가로스쿨 서버에 자동으로 등록되며 등록된 ID를 통해서만 AI서비스를 이용하실 수 있습니다.</li>
+
+
+                        <li>등록된 ID 변경을 원하시는 경우 삭제 후 재등록이 가능합니다.</li><!-- 2021.11.12 -->
+                        <li>삭제 횟수는 스트리밍·다운로드 기기 관계 없이 총 4회로 제한됩니다.</li><!-- 2021.11.12 -->
+                    </ul>
+                </div>
+
+                <div style="text-align:center;" class="mt20"><a href="javascript:window.close();"><img
+                            src="//img.megals.co.kr/mypage/2017/0320_player/btn_03.jpg" /></a></div>
+
+            </div>
+        </div>
+    </form>
+    <iframe src="about:blank" id="ExeFrm" name="ExeFrm" width=0 height=0 frameborder=0></iframe>
+</body>
+
+</html>
+<script type="text/javascript">
+    < !-
+
+        function fnSetDevNickNm(idx, seq, did, dkbn) {
+            var frm = document.frmDev;
+
+            var veri = frm.nicknm;
+
+            if (veri) {
+                veri = frm.nicknm[0];
+                if (veri) {
+                    for (var i = 0; i < frm.nicknm.length; i++) {
+                        if (i == idx && frm.nicknm[i].value != '') {
+                            nicknm = frm.nicknm[i].value;
+                        }
+                    }
+                } else {
+                    if (frm.nicknm.value != '') {
+                        nicknm = frm.nicknm.value;
+                    }
+                }
+            }
+
+            if (nicknm == '') {
+                alert('기기 이름을 입력해주세요.');
+                return;
+            } else {
+                frm.mode.value = 'UPD';
+                frm.seq.value = seq;
+                frm.did.value = did;
+                frm.nic.value = nicknm;
+                frm.dkbn.value = dkbn;
+                frm.submit();
+            }
+        }
+
+    function fnSetDevDel(seq, did, dkbn) {
+        var frm = document.frmDev;
+
+        frm.mode.value = 'DEL';
+        frm.seq.value = seq;
+        frm.did.value = did;
+        frm.dkbn.value = dkbn;
+        frm.submit();
+    }
+
+    function fnSetInit() {
+        window.location.reload(true);
+    }
+
+
+    $(window).load(function () {
+        window.focus();
+
+        resizeWin();
+    });
+
+    function resizeWin() {
+        var strWidth;
+        var strHeight;
+
+        //innerWidth / innerHeight / outerWidth / outerHeight 지원 브라우저
+        if (window.innerWidth && window.innerHeight && window.outerWidth && window.outerHeight) {
+            strWidth = $('.wrap').outerWidth() + (window.outerWidth - window.innerWidth);
+            strHeight = $('.wrap').outerHeight() + (window.outerHeight - window.innerHeight);
+        }
+        else {
+            var strDocumentWidth = $(document).outerWidth();
+            var strDocumentHeight = $(document).outerHeight();
+
+            window.resizeTo(strDocumentWidth, strDocumentHeight);
+
+            var strMenuWidth = strDocumentWidth - $(window).width();
+            var strMenuHeight = strDocumentHeight - $(window).height();
+
+            strWidth = $('.wrap').outerWidth() + strMenuWidth;
+            strHeight = $('.wrap').outerHeight() + strMenuHeight;
+        }
+
+        window.resizeTo(strWidth, strHeight);
+    }
+
+    //-->
+</script>
